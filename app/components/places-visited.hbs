@@ -1,0 +1,12 @@
+<div>
+    Places Visited:
+    Add Visited Place: 
+    <input type="textarea" value={{currentAddedPlace}} oninput={{action updateCurrentPlaceplaceInput}} >
+    <button onclick={{action addDestinationVisited}}> Save Destination </button>
+<ul>
+    {{#each placesVisitedList key="id" as |place|}}
+      <li>{{place}} <button onclick={{action removeDestinationVisited place}}>-</button></li>
+    {{/each}}
+  </ul>
+
+</div>
